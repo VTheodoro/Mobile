@@ -4,22 +4,22 @@ import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
 
 export default function App() {
 
-  const [nome, setNome] = useState('');
+  const [cpf, setCPF] = useState('');
   const [email, setEmail] = useState('');
   const [telefone, setTelefone] = useState('');
   const [senha, setSenha] = useState('');
 
-  const [exibirNome, setExibirNome] = useState('');
+  const [exibircpf, setExibircpf] = useState('');
   const [exibirTelefone, setExibirTelefone] = useState('');
   const [exibirEmail, setExibirEmail] = useState('');
   const [exibirSenha, setExibirSenha] = useState('');
 
   function mostrarDados() {
-    if (nome == '' || telefone == '' || email == '' || senha == '') {
+    if (cpf == '' || telefone == '' || email == '' || senha == '') {
       alert("Preencha todos os campos corretamente.");
     }
     else {
-      setExibirNome(nome);
+      setExibircpf(cpf);
       setExibirEmail(email);
       setExibirTelefone(telefone);
       setExibirSenha(senha);
@@ -33,7 +33,7 @@ export default function App() {
 
       <Text style={styles.textos}>Preencha os seguintes dados:</Text>
 
-      <TextInput placeholder="Nome..." style={styles.textinput} onChangeText={text => setNome(text)} />
+      <TextInput placeholder="CPF..." style={styles.textinput} onChangeText={text => setCPF(text)} />
       <TextInput placeholder="Email..." style={styles.textinput} onChangeText={text => setEmail(text)} />
       <TextInput placeholder="Numero de Telefone..." style={styles.textinput} onChangeText={text => setTelefone(text)} />
       <TextInput secureTextEntry={true} placeholder="Senha..." style={styles.textinput} onChangeText={text => setSenha(text)} />
@@ -46,7 +46,7 @@ export default function App() {
 
       <View style={styles.content}>
         <Text style={styles.textos}>Confirme os Dados Abaixo</Text>
-        <Text style={styles.textos2}>Nome: {exibirNome}</Text>
+        <Text style={styles.textos2}>CPF: {exibircpf}</Text>
         <Text style={styles.textos2}>Email: {exibirEmail}</Text>
         <Text style={styles.textos2}>Telefone: {exibirTelefone}</Text>
         <Text style={styles.textos2}>Senha: {exibirSenha}</Text>
