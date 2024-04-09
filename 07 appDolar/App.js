@@ -8,8 +8,7 @@ export default function App() {
   function calcularValor() {
     if (parseFloat(dolar) > 0) {
       const resReal = parseFloat(dolar) * 4.98;
-      setResultado(resReal.toFixed(2)); // Limitando o resultado a duas casas decimais
-    }
+      setResultado(resReal.toFixed(2));    }
   }
 
   return (
@@ -18,8 +17,8 @@ export default function App() {
       <TextInput
         placeholder='$ 00,00'
         style={styles.textinput}
-        onChangeText={(text) => setDolar(text)} // Corrigindo o nome do argumento para text
-        keyboardType="numeric" // Adicionando um teclado numérico para facilitar a entrada de valores
+        onChangeText={(text) => setDolar(text)}
+        keyboardType="numeric"
       />
       <Button onPress={calcularValor} title="Calcular" color="green" />
       <Text style={styles.resultado}>{resultado ? `Valor em Reais: R$ ${resultado}` : ''}</Text>
