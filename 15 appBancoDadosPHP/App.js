@@ -19,8 +19,8 @@ export default function App() {
 
   async function listaDados() {
     try {
-      const res = await axios.get(api + '/list.php?buscar=' + buscar);
-      setLista(res.data);  // Make sure to update the state
+      const res = await axios.get(api + 'list.php?busca=' + buscar);
+      setLista(res.data.result);  // Make sure to update the state
     } catch (error) {
       console.error('Error fetching data', error);
     }
@@ -29,7 +29,7 @@ export default function App() {
   async function add() {
     const obj = { nome, email, senha, id };
     try {
-      const res = await axios.post(api + '/add.php', obj);
+      const res = await axios.post(api + 'add.php', obj);
       if (res.data.sucess === true) {
         limparCampos();
       } else if (res.data.sucess === 'Email ja Cadastrado!') {
