@@ -1,0 +1,30 @@
+{
+  "name": "appprova3bvictortheodoro",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web"
+  },
+  "dependencies": {
+    "@expo/metro-runtime": "~4.0.1",
+    "@react-navigation/bottom-tabs": "^7.3.5",
+    "@react-navigation/native": "^7.1.1",
+    "@react-navigation/stack": "^7.2.5",
+    "expo": "~52.0.42",
+    "expo-status-bar": "~2.0.1",
+    "node": "^23.11.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-native": "0.76.8",
+    "react-native-reanimated-carousel": "^4.0.2",
+    "react-native-snap-carousel": "^3.9.1",
+    "react-native-web": "~0.19.13"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0"
+  },
+  "private": true
+}
